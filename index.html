@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fury of Anubis – Free Demo, RTP 96.52%, Max Win 10,000x | Pragmatic Play</title>
+  <meta name="description" content="Play Fury of Anubis free demo by Pragmatic Play. Full review, RTP 96.52%, max win 10,000x, paytable, bonus features, strategies and more." />
+  <meta name="keywords" content="Fury of Anubis, Fury of Anubis demo, Fury of Anubis RTP, Pragmatic Play, free slot demo, Egyptian slot, multiplier slot, tumble slot" />
+  <link rel="canonical" href="https://furyofanubis.casino/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fury of Anubis – Free Demo, RTP, Max Win & Strategy" />
+  <meta property="og:description" content="Play the free Fury of Anubis demo. RTP 96.52%, max win 10,000x, full bonus breakdown and strategy guide." />
+  <meta property="og:url" content="https://furyofanubis.casino/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/splash.jpg" />
+
+  <!-- Schema: Slot Game -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Fury of Anubis",
+    "description": "Fury of Anubis is a 5×6 scatter-pay slot by Pragmatic Play featuring tumbling reels, escalating multipliers up to ×1,024, and free spins with starting multipliers from ×8 to ×64.",
+    "genre": "Slot Machine",
+    "gamePlatform": "Web Browser",
+    "publisher": { "@type": "Organization", "name": "Pragmatic Play" },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+
+  <!-- Schema: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the RTP of Fury of Anubis?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Fury of Anubis has an RTP of 96.52%." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the max win on Fury of Anubis?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The maximum win is 10,000× your bet." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you trigger free spins in Fury of Anubis?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Land 3–6 scatter symbols to trigger 10 free spins with starting multipliers from ×8 to ×64." }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://furyofanubis.com/" }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ── RESET & BASE ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold:        #d4af37;
+      --gold-light:  #f0c84a;
+      --gold-dim:    #a07c20;
+      --gold-glow:   rgba(212,175,55,0.25);
+      --bg:          #07070d;
+      --bg-card:     #0e0e1a;
+      --bg-card2:    #121220;
+      --border:      rgba(212,175,55,0.18);
+      --border-bright: rgba(212,175,55,0.45);
+      --text:        #e8e6df;
+      --text-muted:  #8a8580;
+      --red:         #e05252;
+      --green:       #4caf7d;
+      --radius:      12px;
+      --radius-lg:   20px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { color: var(--gold-light); }
+    img { max-width: 100%; display: block; }
+
+    /* ── PARTICLES BG ── */
+    .particles {
+      position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(212,175,55,0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 40% at 90% 110%, rgba(100,60,10,0.12) 0%, transparent 60%);
+    }
+
+    /* ── HERO IMAGE BG ── */
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background-image: url('images/banner.jpg');
+      background-size: cover; background-position: center 30%;
+      filter: brightness(.35) saturate(1.2);
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg,
+        rgba(7,7,13,0.2) 0%,
+        rgba(7,7,13,0.5) 60%,
+        rgba(7,7,13,1) 100%);
+    }
+
+    /* ── FIRE SECTION BG ── */
+    .fire-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background-image: url('images/bg-fire.jpg');
+      background-size: cover; background-position: center;
+      filter: brightness(.25) saturate(1.3);
+    }
+    .fire-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg,
+        rgba(7,7,13,1) 0%,
+        rgba(7,7,13,0.3) 50%,
+        rgba(7,7,13,1) 100%);
+    }
+
+    /* ── PYRAMID BG ── */
+    .pyramid-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background-image: url('images/bg-pyramid.jpg');
+      background-size: cover; background-position: center;
+      filter: brightness(.2) saturate(1.1);
+    }
+    .pyramid-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg,
+        rgba(7,7,13,1) 0%,
+        rgba(7,7,13,0.2) 50%,
+        rgba(7,7,13,1) 100%);
+    }
+
+    /* ── SPLASH SECTION ── */
+    .splash-section {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+      align-items: stretch; overflow: hidden;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    }
+    .splash-img {
+      position: relative;
+      background-image: url('images/splash.jpg');
+      background-size: cover; background-position: center top;
+      min-height: 500px;
+    }
+    .splash-img::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(270deg, rgba(7,7,13,1) 0%, rgba(7,7,13,0.1) 60%, transparent 100%);
+    }
+    .splash-content {
+      padding: 4rem 3rem 4rem 2rem;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    @media (max-width: 768px) {
+      .splash-section { grid-template-columns: 1fr; }
+      .splash-img { min-height: 280px; }
+      .splash-img::after { background: linear-gradient(180deg, transparent 60%, rgba(7,7,13,1) 100%); }
+      .splash-content { padding: 2rem 1.5rem; }
+    }
+
+    /* ── TRAILER SECTION ── */
+    .trailer-wrapper {
+      max-width: 900px; margin: 0 auto;
+      border-radius: var(--radius-lg); overflow: hidden;
+      border: 1px solid var(--border-bright);
+      box-shadow: 0 0 60px rgba(212,175,55,.12), 0 20px 60px rgba(0,0,0,.6);
+      background: #000;
+    }
+    .trailer-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .75rem 1.25rem;
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+    }
+    .trailer-title { font-size: .85rem; font-weight: 600; color: var(--gold); display: flex; align-items: center; gap: .5rem; }
+    .trailer-frame-wrap { position: relative; width: 100%; aspect-ratio: 16/9; }
+    .trailer-frame-wrap iframe {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%; border: none;
+    }
+    .trailer-video {
+      width: 100%; display: block;
+      aspect-ratio: 16/9; background: #000;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2rem;
+      height: 62px;
+      background: rgba(7,7,13,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-size: 1.15rem; font-weight: 700; letter-spacing: .04em;
+      color: var(--gold-light);
+      display: flex; align-items: center; gap: .5rem;
+    }
+    .nav-logo svg { width: 26px; height: 26px; }
+    .nav-links { display: flex; gap: .25rem; }
+    .nav-links a {
+      padding: .4rem .75rem; border-radius: 8px;
+      font-size: .85rem; font-weight: 500; color: var(--text-muted);
+      transition: color .2s, background .2s;
+    }
+    .nav-links a:hover { color: var(--gold-light); background: rgba(212,175,55,.08); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold); color: #0a0800;
+      padding: .45rem 1.1rem; border-radius: 8px;
+      font-size: .85rem; font-weight: 700;
+      transition: background .2s, transform .15s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: var(--gold-light); color: #0a0800; transform: translateY(-1px); }
+    .nav-right { display: flex; align-items: center; gap: .75rem; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative; z-index: 1;
+      text-align: center;
+      padding: 7rem 1.5rem 4rem;
+      overflow: hidden;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: rgba(212,175,55,.1); border: 1px solid var(--border-bright);
+      border-radius: 50px; padding: .35rem 1rem;
+      font-size: .78rem; font-weight: 600; letter-spacing: .08em;
+      color: var(--gold); text-transform: uppercase; margin-bottom: 1.25rem;
+    }
+    .hero-badge::before { content: "●"; font-size: .6rem; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 800; line-height: 1.2;
+      background: linear-gradient(135deg, #f5e06e 0%, var(--gold) 40%, #b8850a 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: .75rem;
+    }
+    .hero-sub {
+      font-size: 1.05rem; color: var(--text-muted);
+      max-width: 620px; margin: 0 auto 2rem;
+    }
+    .hero-buttons {
+      display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .7rem 1.5rem; border-radius: 10px;
+      font-size: .9rem; font-weight: 700; cursor: pointer;
+      transition: all .2s; border: none; text-decoration: none;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold) 0%, #b8850a 100%);
+      color: #0a0800;
+      box-shadow: 0 4px 20px rgba(212,175,55,.3);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(212,175,55,.45); color:#0a0800; }
+    .btn-outline {
+      background: transparent; color: var(--gold);
+      border: 1.5px solid var(--border-bright);
+    }
+    .btn-outline:hover { background: var(--gold-glow); transform: translateY(-2px); color: var(--gold-light); }
+
+    /* ── QUICK STATS BAR ── */
+    .stats-bar {
+      position: relative; z-index: 1;
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 1px;
+      max-width: 900px; margin: 0 auto 2.5rem;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .stat-item {
+      flex: 1; min-width: 130px;
+      background: var(--bg-card);
+      padding: 1rem .75rem;
+      text-align: center;
+      transition: background .2s;
+    }
+    .stat-item:hover { background: var(--bg-card2); }
+    .stat-label { font-size: .7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .3rem; }
+    .stat-value { font-size: 1.2rem; font-weight: 800; color: var(--gold-light); }
+    .stat-value.green { color: var(--green); }
+    .stat-value.red { color: var(--red); }
+
+    /* ── SECTION SHARED ── */
+    section { position: relative; z-index: 1; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+    .section-pad { padding: 4rem 0; }
+    .section-title {
+      font-size: 1.7rem; font-weight: 800;
+      color: var(--gold-light);
+      margin-bottom: .4rem;
+    }
+    .section-title span { color: var(--text-muted); font-weight: 400; }
+    .section-lead { color: var(--text-muted); margin-bottom: 2rem; max-width: 650px; font-size: .97rem; }
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-bright), transparent);
+      margin: 1px 0;
+    }
+
+    /* ── DEMO SECTION ── */
+    .demo-section { padding: 0 0 3rem; }
+    .demo-wrapper {
+      max-width: 960px; margin: 0 auto;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-bright);
+      box-shadow: 0 0 60px rgba(212,175,55,.12), 0 20px 60px rgba(0,0,0,.5);
+      background: #000;
+      position: relative;
+    }
+    .demo-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .75rem 1.25rem;
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+    }
+    .demo-title { font-size: .85rem; font-weight: 600; color: var(--gold); display: flex; align-items: center; gap: .5rem; }
+    .demo-badge-live {
+      font-size: .68rem; background: rgba(76,175,125,.15);
+      border: 1px solid rgba(76,175,125,.4);
+      color: var(--green); border-radius: 50px; padding: .15rem .6rem;
+    }
+    .demo-actions { display: flex; gap: .5rem; }
+    .demo-actions a {
+      font-size: .75rem; color: var(--text-muted);
+      background: rgba(255,255,255,.05);
+      border: 1px solid var(--border);
+      padding: .25rem .7rem; border-radius: 6px;
+      transition: all .2s;
+    }
+    .demo-actions a:hover { color: var(--gold); border-color: var(--border-bright); }
+    .demo-frame-wrap { position: relative; width: 100%; aspect-ratio: 16/9; }
+    .demo-frame-wrap iframe {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      border: none; display: block;
+    }
+    .demo-footer {
+      padding: .6rem 1.25rem;
+      background: var(--bg-card);
+      border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: .5rem;
+    }
+    .demo-footer-note { font-size: .72rem; color: var(--text-muted); }
+    .demo-footer-link { font-size: .78rem; font-weight: 600; color: var(--gold); }
+
+    /* ── CARDS GRID ── */
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.25rem; }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: border-color .2s, transform .2s, box-shadow .2s;
+    }
+    .card:hover {
+      border-color: var(--border-bright);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(212,175,55,.1);
+    }
+    .card-icon { font-size: 1.75rem; margin-bottom: .75rem; }
+    .card-title { font-size: 1rem; font-weight: 700; color: var(--gold-light); margin-bottom: .5rem; }
+    .card-text { font-size: .88rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* ── FEATURES ── */
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 1rem; }
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      display: flex; gap: 1rem; align-items: flex-start;
+      transition: border-color .2s, transform .2s;
+    }
+    .feature-card:hover { border-color: var(--border-bright); transform: translateY(-2px); }
+    .feature-num {
+      flex-shrink: 0;
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: rgba(212,175,55,.12);
+      border: 1px solid var(--border-bright);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .85rem; font-weight: 800; color: var(--gold);
+    }
+    .feature-content {}
+    .feature-title { font-size: .95rem; font-weight: 700; color: var(--text); margin-bottom: .3rem; }
+    .feature-desc { font-size: .83rem; color: var(--text-muted); line-height: 1.55; }
+
+    /* ── BONUS BUY TABLE ── */
+    .buy-table { width: 100%; border-collapse: collapse; }
+    .buy-table th {
+      font-size: .75rem; text-transform: uppercase; letter-spacing: .08em;
+      color: var(--text-muted); font-weight: 600;
+      padding: .6rem 1rem; text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .buy-table td {
+      padding: .85rem 1rem;
+      border-bottom: 1px solid rgba(212,175,55,.07);
+      font-size: .88rem;
+    }
+    .buy-table tr:last-child td { border-bottom: none; }
+    .buy-table tr:hover td { background: rgba(212,175,55,.04); }
+    .buy-table .cost { color: var(--gold); font-weight: 700; }
+    .buy-table .mult { color: var(--gold-light); font-weight: 700; }
+    .buy-tag {
+      font-size: .7rem; padding: .15rem .5rem; border-radius: 50px;
+      font-weight: 700;
+    }
+    .buy-tag.best { background: rgba(212,175,55,.15); color: var(--gold); border: 1px solid var(--border-bright); }
+    .buy-tag.random { background: rgba(100,100,200,.15); color: #a8b4f0; border: 1px solid rgba(100,100,200,.3); }
+
+    /* ── STATS DEEP ── */
+    .stats-deep { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1rem; }
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .stat-card:hover { border-color: var(--border-bright); }
+    .stat-card-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--text-muted); margin-bottom: .4rem; }
+    .stat-card-value { font-size: 1.5rem; font-weight: 800; color: var(--gold-light); }
+    .stat-card-sub { font-size: .74rem; color: var(--text-muted); margin-top: .2rem; }
+
+    /* ── TOOLS SECTION ── */
+    .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 1rem; }
+    .tool-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      transition: all .2s;
+      display: flex; flex-direction: column; gap: .75rem;
+    }
+    .tool-card:hover { border-color: var(--border-bright); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,175,55,.08); }
+    .tool-header { display: flex; align-items: center; gap: .75rem; }
+    .tool-icon {
+      width: 38px; height: 38px;
+      background: rgba(212,175,55,.1);
+      border: 1px solid var(--border-bright);
+      border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .tool-name { font-size: .95rem; font-weight: 700; color: var(--text); }
+    .tool-desc { font-size: .82rem; color: var(--text-muted); line-height: 1.5; }
+    .tool-link {
+      font-size: .8rem; font-weight: 700; color: var(--gold);
+      display: inline-flex; align-items: center; gap: .3rem;
+    }
+    .tool-link::after { content: "→"; }
+
+    /* ── REVIEW PREVIEW ── */
+    .review-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: start;
+    }
+    .verdict {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: rgba(212,175,55,.08);
+      border: 1px solid var(--border-bright);
+      border-radius: var(--radius);
+      padding: 1.5rem 2rem; text-align: center; min-width: 140px;
+    }
+    .verdict-score { font-size: 3rem; font-weight: 900; color: var(--gold); line-height: 1; }
+    .verdict-label { font-size: .75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .08em; margin-top: .4rem; }
+    .verdict-stars { font-size: 1.1rem; margin-top: .4rem; }
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1.25rem; }
+    .pros h4 { color: var(--green); font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; margin-bottom: .5rem; }
+    .cons h4 { color: var(--red); font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; margin-bottom: .5rem; }
+    .pros ul, .cons ul { list-style: none; display: flex; flex-direction: column; gap: .35rem; }
+    .pros li::before { content: "✓ "; color: var(--green); font-weight: 700; }
+    .cons li::before { content: "✗ "; color: var(--red); font-weight: 700; }
+    .pros li, .cons li { font-size: .84rem; color: var(--text-muted); }
+
+    /* ── BLOG GRID ── */
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.25rem; }
+    .blog-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: all .2s;
+    }
+    .blog-card:hover { border-color: var(--border-bright); transform: translateY(-3px); box-shadow: 0 8px 28px rgba(212,175,55,.1); }
+    .blog-card-img {
+      height: 160px;
+      background: linear-gradient(135deg, #1a1208 0%, #2a1e08 50%, #0e0e1a 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .blog-card-body { padding: 1.25rem; }
+    .blog-tag {
+      font-size: .68rem; text-transform: uppercase; letter-spacing: .08em;
+      color: var(--gold); font-weight: 700; margin-bottom: .5rem; display: block;
+    }
+    .blog-card-title { font-size: .95rem; font-weight: 700; color: var(--text); margin-bottom: .5rem; line-height: 1.4; }
+    .blog-card-excerpt { font-size: .82rem; color: var(--text-muted); line-height: 1.55; }
+
+    /* ── CASINO BANNER ── */
+    .casino-banner {
+      background: linear-gradient(135deg, #0e0e1a 0%, #1a1208 50%, #0e0e1a 100%);
+      border: 1px solid var(--border-bright);
+      border-radius: var(--radius-lg);
+      padding: 2rem 2.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1.5rem;
+      box-shadow: 0 0 40px rgba(212,175,55,.08);
+    }
+    .casino-banner h3 { font-size: 1.3rem; font-weight: 800; color: var(--gold-light); margin-bottom: .4rem; }
+    .casino-banner p { font-size: .88rem; color: var(--text-muted); max-width: 520px; }
+
+    /* ── FAQ ── */
+    .faq-list { display: flex; flex-direction: column; gap: .75rem; }
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .faq-q {
+      width: 100%; text-align: left;
+      padding: 1rem 1.25rem;
+      background: none; border: none; cursor: pointer;
+      color: var(--text); font-size: .93rem; font-weight: 600;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem;
+    }
+    .faq-q:hover { color: var(--gold-light); }
+    .faq-q .faq-icon { color: var(--gold); font-size: 1.1rem; flex-shrink: 0; transition: transform .2s; }
+    .faq-a {
+      padding: 0 1.25rem 1rem;
+      font-size: .87rem; color: var(--text-muted); line-height: 1.65;
+      display: none;
+    }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--bg-card);
+      padding: 3rem 0 2rem;
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+    .footer-brand p { font-size: .83rem; color: var(--text-muted); margin-top: .6rem; line-height: 1.6; max-width: 280px; }
+    .footer-col h4 { font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; color: var(--gold); margin-bottom: .9rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
+    .footer-col ul li a { font-size: .84rem; color: var(--text-muted); transition: color .2s; }
+    .footer-col ul li a:hover { color: var(--gold-light); }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { font-size: .75rem; color: var(--text-muted); }
+    .footer-disclaimer {
+      font-size: .72rem; color: var(--text-muted);
+      opacity: .6; max-width: 600px; line-height: 1.5;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 0 1rem; }
+      .nav-links { display: none; }
+      .hero { padding: 3.5rem 1rem 2rem; }
+      .hero h1 { font-size: 2rem; }
+      .stats-bar { border-radius: 12px; }
+      .review-card { grid-template-columns: 1fr; }
+      .pros-cons { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .casino-banner { text-align: center; justify-content: center; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── GLOW LINES ── */
+    .glow-line {
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+      opacity: .25; margin: 0 auto;
+    }
+
+    /* ── SCROLL ANCHOR OFFSET ── */
+    [id] { scroll-margin-top: 80px; }
+  </style>
+</head>
+
+<body>
+<div class="particles"></div>
+
+<!-- ─── NAVIGATION ─── -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="13,2 24,22 2,22" fill="none" stroke="#d4af37" stroke-width="1.8"/>
+      <circle cx="13" cy="14" r="3.5" fill="#d4af37" opacity=".85"/>
+    </svg>
+    FuryOfAnubis.casino
+  </a>
+  <div class="nav-links">
+    <a href="/" class="active">Home</a>
+    <a href="/demo/">Demo</a>
+    <a href="/slot-review/">Review</a>
+    <a href="/paytable/">Paytable</a>
+    <a href="/statistics/">Statistics</a>
+    <a href="/tips-tricks/">Tips</a>
+    <a href="/blog/">Blog</a>
+    <a href="/about/">About</a>
+  </div>
+  <div class="nav-right">
+    <a href="https://slotessentials.com/" target="_blank" rel="noopener" class="btn nav-cta">🎰 SlotEssentials</a>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div style="position:relative;z-index:1;">
+  <div class="hero-badge">🔥 New Release · June 25, 2026 · Pragmatic Play</div>
+  <h1>Fury of Anubis<br>Free Demo, RTP, Max Win &amp; Strategy</h1>
+  <p class="hero-sub">Play the free demo instantly. Full review, RTP 96.52%, max win 10,000×, paytable breakdown and pro strategies — all in one place.</p>
+  <div class="hero-buttons">
+    <a href="#demo" class="btn btn-primary">▶ Play Free Demo</a>
+    <a href="/slot-review/" class="btn btn-outline">📖 Read Review</a>
+    <a href="/paytable/" class="btn btn-outline">📊 Paytable</a>
+    <a href="/tips-tricks/" class="btn btn-outline">🎯 Strategies</a>
+  </div>
+  </div><!-- /z-index wrapper -->
+</section>
+
+<!-- ─── QUICK STATS BAR ─── -->
+<div class="container" style="padding-bottom:2.5rem;">
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-label">RTP</div>
+      <div class="stat-value green">96.52%</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-label">Max Win</div>
+      <div class="stat-value">10,000×</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-label">Volatility</div>
+      <div class="stat-value">Medium</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-label">Max Multiplier</div>
+      <div class="stat-value">×1,024</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-label">Bet Range</div>
+      <div class="stat-value">$0.20–$240</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-label">Release Date</div>
+      <div class="stat-value" style="font-size:.9rem;">Jun 25, 2026</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-label">Provider</div>
+      <div class="stat-value" style="font-size:.9rem;">Pragmatic Play</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── SPLASH / CHARACTER ARTWORK ─── -->
+<div class="splash-section">
+  <div class="splash-img" role="img" aria-label="Fury of Anubis – Anubis character art"></div>
+  <div class="splash-content">
+    <div class="hero-badge" style="margin-bottom:1.25rem; display:inline-flex; width:fit-content;">⚡ Pragmatic Play · June 2026</div>
+    <h2 style="font-size:clamp(1.6rem,3vw,2.4rem); font-weight:800; line-height:1.2; background:linear-gradient(135deg,#f5e06e 0%,var(--gold) 40%,#b8850a 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:1rem;">
+      Enter the Afterlife.<br>Face the God of Death.
+    </h2>
+    <p style="color:var(--text-muted); font-size:.95rem; line-height:1.75; margin-bottom:1.5rem;">
+      Fury of Anubis drops players into the judgment halls of ancient Egypt. Anubis towers over a 5×6 grid where every chain of tumbling symbols doubles your multiplier — from ×1 all the way to ×1,024. This isn't just a slot. It's a test of your worth against the god of death himself.
+    </p>
+    <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+      <a href="#demo" class="btn btn-primary">▶ Play Free Demo</a>
+      <a href="/slot-review/" class="btn btn-outline">Read Full Review</a>
+    </div>
+  </div>
+</div>
+
+<!-- ─── DEMO ─── -->
+<section class="demo-section" id="demo">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:1.5rem;">
+      <h2 class="section-title">Play Fury of Anubis – Free Demo</h2>
+      <p class="section-lead" style="margin: 0 auto;">No download, no registration. Instant play in your browser. Practice strategies, explore bonus features, and find your ideal bet size — completely free.</p>
+    </div>
+    <div class="demo-wrapper">
+      <div class="demo-header">
+        <div class="demo-title">
+          🎮 Fury of Anubis &nbsp;
+          <span class="demo-badge-live">● FREE DEMO</span>
+        </div>
+        <div class="demo-actions">
+          <a href="https://roobet.com/?ref=elite" target="_blank" rel="noopener">Play for Real →</a>
+        </div>
+      </div>
+      <div class="demo-frame-wrap">
+        <iframe
+          src="https://demogamesfree.pragmaticplay.net/hub-demo/openGame.do?stylename=demo_clienthub&lang=en&cur=USD&websiteUrl=https%3A%2F%2Fclienthub.pragmaticplay.com%2F&gcpif=11545&gameSymbol=vs20wraanu&jurisdiction=99"
+          allowfullscreen
+          loading="lazy"
+          title="Fury of Anubis Free Demo – Pragmatic Play"
+        ></iframe>
+      </div>
+      <div class="demo-footer">
+        <span class="demo-footer-note">🔒 Demo mode – no real money. 18+ Gambling can be addictive. Play responsibly.</span>
+        <a href="https://slotessentials.com/" target="_blank" rel="noopener" class="demo-footer-link">Track your sessions on SlotEssentials →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHY THIS GAME IS TRENDING ─── -->
+<section class="section-pad" style="padding-top:3rem;">
+  <div class="container">
+    <div class="review-card">
+      <div>
+        <h2 class="section-title" style="margin-bottom:.75rem;">Why Fury of Anubis Is Dominating 2026</h2>
+        <p style="color:var(--text-muted); font-size:.93rem; line-height:1.7; margin-bottom:1rem;">
+          Fury of Anubis takes players on a journey through the afterlife, guided by the Egyptian god of death. With tumbling reels, escalating multipliers, and a gamble feature that can push starting multipliers to staggering heights, this medium-volatility slot offers a max win of 10,000×.
+        </p>
+        <p style="color:var(--text-muted); font-size:.93rem; line-height:1.7; margin-bottom:1.25rem;">
+          Running on a 5×6 grid with a scatter-pay system, wins trigger tumbling reels where symbols drop away and new ones fall in, creating chain reactions. A win multiplier starts at ×1 each spin and doubles with every consecutive tumble — climbing up to <strong style="color:var(--gold);">×1,024</strong>. Combined with a Bonus Buy suite and Super Spin options, this is one of Pragmatic Play's most explosive releases.
+        </p>
+        <div class="pros-cons">
+          <div class="pros">
+            <h4>Pros</h4>
+            <ul>
+              <li>Multipliers up to ×1,024 in base play</li>
+              <li>Excellent RTP of 96.52%</li>
+              <li>Full Bonus Buy suite (5 options)</li>
+              <li>Gamble feature before free spins</li>
+              <li>Medium volatility — sustainable bankroll</li>
+              <li>Scatter retriggers reset to 10 spins</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h4>Cons</h4>
+            <ul>
+              <li>Max win 1 in 4.84 million spins</li>
+              <li>Free spins frequency 1 in 435</li>
+              <li>Gamble feature adds risk to bonus</li>
+              <li>No progressive jackpot</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="verdict">
+        <div class="verdict-score">8.7</div>
+        <div class="verdict-label">SlotEssentials Score</div>
+        <div class="verdict-stars">⭐⭐⭐⭐½</div>
+        <div style="margin-top:1rem;">
+          <a href="/slot-review/" class="btn btn-outline" style="padding:.5rem 1rem; font-size:.8rem;">Full Review →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="glow-line"></div></div>
+
+<!-- ─── BONUS FEATURES ─── -->
+<section class="section-pad" id="features" style="position:relative; overflow:hidden;">
+  <div class="fire-bg"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <h2 class="section-title">Bonus Features</h2>
+    <p class="section-lead">Five interconnected mechanics that drive the explosive win potential.</p>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-num">1</div>
+        <div class="feature-content">
+          <div class="feature-title">Tumbling Reels</div>
+          <div class="feature-desc">Winning symbols are removed and new ones fall in from above. Every consecutive tumble doubles the active win multiplier, creating chain-reaction potential.</div>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">2</div>
+        <div class="feature-content">
+          <div class="feature-title">Win Multiplier — Up to ×1,024</div>
+          <div class="feature-desc">Starts at ×1 on every spin. Doubles with each successful tumble: ×1 → ×2 → ×4 → ×8 … up to ×1,024 in base play and free spins alike.</div>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">3</div>
+        <div class="feature-content">
+          <div class="feature-title">Free Spins — ×8 to ×64 Start</div>
+          <div class="feature-desc">Land 3–6 scatters anywhere on the grid to trigger 10 free spins. More scatters = higher starting multiplier: 3 scatters → ×8 up to 6 scatters → ×64.</div>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">4</div>
+        <div class="feature-content">
+          <div class="feature-title">Gamble Feature — Up to ×256</div>
+          <div class="feature-desc">Before free spins launch, gamble to double your starting multiplier up to ×256. High risk, potentially massive reward.</div>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">5</div>
+        <div class="feature-content">
+          <div class="feature-title">Scatter Retriggers</div>
+          <div class="feature-desc">Landing 3+ scatters during free spins resets the spin count back to 10 — keeping your session alive with the current multiplier intact.</div>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">★</div>
+        <div class="feature-content">
+          <div class="feature-title">Ante Bet &amp; Super Spins</div>
+          <div class="feature-desc">3× Ante Bet boosts scatter frequency by 10×. Super Spin 1 (20×) awards a single spin with a random opening multiplier. Super Spin 2 (250×) guarantees ×256 for one explosive spin.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="glow-line"></div></div>
+
+<!-- ─── BONUS BUY ─── -->
+<section class="section-pad" id="bonusbuy">
+  <div class="container">
+    <h2 class="section-title">Bonus Buy Options</h2>
+    <p class="section-lead">Skip the base game and jump straight to free spins. All costs scale from your total bet.</p>
+    <div class="card" style="padding:0; overflow:hidden;">
+      <table class="buy-table">
+        <thead>
+          <tr>
+            <th>Option</th>
+            <th>Cost</th>
+            <th>Min Starting Multiplier</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Free Spins 1</strong></td>
+            <td class="cost">100×</td>
+            <td class="mult">×8</td>
+            <td><span class="buy-tag best">Entry Level</span></td>
+          </tr>
+          <tr>
+            <td><strong>Free Spins 2</strong></td>
+            <td class="cost">200×</td>
+            <td class="mult">×16</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>Free Spins 3</strong></td>
+            <td class="cost">400×</td>
+            <td class="mult">×32</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>Free Spins 4</strong></td>
+            <td class="cost">800×</td>
+            <td class="mult">×64</td>
+            <td><span class="buy-tag best">Max Multiplier</span></td>
+          </tr>
+          <tr>
+            <td><strong>Random Free Spins</strong></td>
+            <td class="cost">175×</td>
+            <td class="mult">×8 – ×64 (random)</td>
+            <td><span class="buy-tag random">Middle Ground</span></td>
+          </tr>
+          <tr>
+            <td><strong>Super Spin 1</strong></td>
+            <td class="cost">20×</td>
+            <td class="mult">Random initial mult</td>
+            <td>Single spin burst</td>
+          </tr>
+          <tr>
+            <td><strong>Super Spin 2</strong></td>
+            <td class="cost">250×</td>
+            <td class="mult">×256 guaranteed</td>
+            <td><span class="buy-tag best">Max Win Hunt</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.78rem; color:var(--text-muted); margin-top:.75rem;">⚠️ Bonus Buy may not be available in all jurisdictions. Ante Bet (3×) increases scatter frequency by 10× without guaranteeing a bonus.</p>
+  </div>
+</section>
+
+<div class="container"><div class="glow-line"></div></div>
+
+<!-- ─── STATISTICS ─── -->
+<section class="section-pad" id="statistics" style="position:relative; overflow:hidden;">
+  <div class="pyramid-bg"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <h2 class="section-title">Statistics &amp; Hit Frequencies</h2>
+    <p class="section-lead">Hard data on how often wins, bonuses, and big hits actually land.</p>
+    <div class="stats-deep">
+      <div class="stat-card">
+        <div class="stat-card-label">RTP</div>
+        <div class="stat-card-value">96.52%</div>
+        <div class="stat-card-sub">Industry above average</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-label">Base Game Hit Freq</div>
+        <div class="stat-card-value">1 in 3.59</div>
+        <div class="stat-card-sub">~27.9% of spins win</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-label">Free Spins Frequency</div>
+        <div class="stat-card-value">1 in 435</div>
+        <div class="stat-card-sub">Natural trigger rate</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-label">Win &gt;1,000×</div>
+        <div class="stat-card-value">1 in 130,828</div>
+        <div class="stat-card-sub">Per spin probability</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-label">Win &gt;5,000×</div>
+        <div class="stat-card-value">1 in 2,927,400</div>
+        <div class="stat-card-sub">Per spin probability</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-label">Max Win (10,000×)</div>
+        <div class="stat-card-value">1 in 4.84M</div>
+        <div class="stat-card-sub">Extremely rare but possible</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-label">Volatility</div>
+        <div class="stat-card-value">Medium</div>
+        <div class="stat-card-sub">3 / 5 rating</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-label">Bet Range</div>
+        <div class="stat-card-value">$0.20–$240</div>
+        <div class="stat-card-sub">With ante: up to $720</div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:1.75rem;">
+      <a href="/statistics/" class="btn btn-outline">View Full Statistics Page →</a>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="glow-line"></div></div>
+
+<!-- ─── SLOTESSENTIALS TOOLS ─── -->
+<section class="section-pad" id="tools">
+  <div class="container">
+    <h2 class="section-title">SlotEssentials Tracking Tools</h2>
+    <p class="section-lead">Free tools built by <a href="https://slotessentials.com/" target="_blank" rel="noopener">SlotEssentials</a> to help you track performance, hunt bonuses, and maximize your sessions.</p>
+    <div class="tools-grid">
+      <a href="https://slotessentials.com/record-win-tracker/fury-of-anubis" target="_blank" rel="noopener" class="tool-card">
+        <div class="tool-header">
+          <div class="tool-icon">🏆</div>
+          <div class="tool-name">Record Win Tracker</div>
+        </div>
+        <div class="tool-desc">Log your biggest Fury of Anubis hits, track personal records, and compare with the community.</div>
+        <div class="tool-link">Open Tracker</div>
+      </a>
+      <a href="https://slotessentials.com/session-tracking" target="_blank" rel="noopener" class="tool-card">
+        <div class="tool-header">
+          <div class="tool-icon">📊</div>
+          <div class="tool-name">Session Tracker</div>
+        </div>
+        <div class="tool-desc">Monitor RTP, win rate, and performance across your Fury of Anubis sessions in real time.</div>
+        <div class="tool-link">Start Tracking</div>
+      </a>
+      <a href="https://slotessentials.com/bonus-hunt" target="_blank" rel="noopener" class="tool-card">
+        <div class="tool-header">
+          <div class="tool-icon">🎯</div>
+          <div class="tool-name">Bonus Hunt Tracker</div>
+        </div>
+        <div class="tool-desc">Perfect for high-volatility bonus hunts. Log opens, calculate averages, and analyze results.</div>
+        <div class="tool-link">Track Bonus Hunt</div>
+      </a>
+      <a href="https://slotessentials.com/random-slot-generator" target="_blank" rel="noopener" class="tool-card">
+        <div class="tool-header">
+          <div class="tool-icon">🎲</div>
+          <div class="tool-name">Random Slot Generator</div>
+        </div>
+        <div class="tool-desc">Need a break? Discover your next favourite slot with our random generator and slot database.</div>
+        <div class="tool-link">Explore Slots</div>
+      </a>
+      <a href="https://slotessentials.com/slot-database/hot-and-cold" target="_blank" rel="noopener" class="tool-card">
+        <div class="tool-header">
+          <div class="tool-icon">🌡️</div>
+          <div class="tool-name">Hot &amp; Cold Slots</div>
+        </div>
+        <div class="tool-desc">See which slots are paying out most frequently right now across our player database.</div>
+        <div class="tool-link">View Database</div>
+      </a>
+      <a href="https://slotessentials.com/max-win-merch" target="_blank" rel="noopener" class="tool-card">
+        <div class="tool-header">
+          <div class="tool-icon">👕</div>
+          <div class="tool-name">Max Win Merch</div>
+        </div>
+        <div class="tool-desc">Hit the 10,000× max win? Claim your official Max Win Merch — badges and limited-edition apparel.</div>
+        <div class="tool-link">Claim Merch</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="glow-line"></div></div>
+
+<!-- ─── CASINO RECOMMENDATION ─── -->
+<section class="section-pad" id="casino">
+  <div class="container">
+    <div class="casino-banner">
+      <div>
+        <h3>Best Casino for Fury of Anubis — Roobet</h3>
+        <p>Instant signup, fast crypto deposits, and the full Pragmatic Play library. Exclusive promotions, Roobet Rewards, and 24/7 live support make it the ideal home for Fury of Anubis. Use code <strong style="color:var(--gold);">ELITE</strong> for exclusive benefits.</p>
+        <div style="display:flex; gap:.75rem; flex-wrap:wrap; margin-top:1.25rem;">
+          <a href="https://roobet.com/?ref=elite" target="_blank" rel="noopener" class="btn btn-primary">Play on Roobet →</a>
+          <a href="https://slotessentials.com/rewards/sign-up-bonuses" target="_blank" rel="noopener" class="btn btn-outline">View Sign Up Bonuses</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="glow-line"></div></div>
+
+<!-- ─── REWARDS ─── -->
+<section class="section-pad">
+  <div class="container">
+    <h2 class="section-title">Challenges &amp; Rewards</h2>
+    <p class="section-lead">Play through our ELITE affiliate link and unlock the full SlotEssentials rewards ecosystem.</p>
+    <div class="cards-grid">
+      <a href="https://slotessentials.com/rewards/monthly-wager-leaderboard" target="_blank" rel="noopener" class="card">
+        <div class="card-icon">🏅</div>
+        <div class="card-title">$50K Monthly Leaderboard</div>
+        <div class="card-text">Compete monthly for a share of $50,000 in prizes. Every wager on Fury of Anubis counts toward your rank.</div>
+      </a>
+      <a href="https://slotessentials.com/rewards/wager-milestones" target="_blank" rel="noopener" class="card">
+        <div class="card-icon">🎖️</div>
+        <div class="card-title">Wager Milestones</div>
+        <div class="card-text">Hit wagering milestones and unlock rewards, bonuses, and VIP perks as you progress.</div>
+      </a>
+      <a href="https://slotessentials.com/rewards/sign-up-bonuses" target="_blank" rel="noopener" class="card">
+        <div class="card-icon">💎</div>
+        <div class="card-title">Exclusive Sign Up Bonuses</div>
+        <div class="card-text">Exclusive sign-up bonuses and free spins for new players joining via SlotEssentials ELITE.</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="glow-line"></div></div>
+
+<!-- ─── BLOG PREVIEWS ─── -->
+<section class="section-pad" id="blog">
+  <div class="container">
+    <h2 class="section-title">Latest from the Blog</h2>
+    <p class="section-lead">Strategy, analysis and deep-dives on Fury of Anubis and high-volatility slots.</p>
+    <div class="blog-grid">
+      <a href="/blog/fury-of-anubis-release-date/" class="blog-card">
+        <div class="blog-card-img">𓂀</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Release</span>
+          <div class="blog-card-title">Fury of Anubis Release Date &amp; What to Expect</div>
+          <div class="blog-card-excerpt">Everything confirmed about the June 25, 2026 release — mechanics, multipliers and why this is Pragmatic Play's most anticipated slot of the year.</div>
+        </div>
+      </a>
+      <a href="/blog/fury-of-anubis-vs-gates-of-olympus/" class="blog-card">
+        <div class="blog-card-img">⚡</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Comparison</span>
+          <div class="blog-card-title">Fury of Anubis vs Gates of Olympus — Which Wins?</div>
+          <div class="blog-card-excerpt">Two Pragmatic Play giants go head-to-head. We compare RTP, multipliers, bonus frequency, and max win potential.</div>
+        </div>
+      </a>
+      <a href="/blog/how-multiplier-slots-work/" class="blog-card">
+        <div class="blog-card-img">✖️</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Strategy</span>
+          <div class="blog-card-title">How Multiplier Slots Actually Work</div>
+          <div class="blog-card-excerpt">The math behind tumbling multipliers, how they compound, and what really drives the 10,000× max win in Fury of Anubis.</div>
+        </div>
+      </a>
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="/blog/" class="btn btn-outline">View All Articles →</a>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="glow-line"></div></div>
+
+<!-- ─── FAQ ─── -->
+<section class="section-pad" id="faq">
+  <div class="container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-lead">Everything you need to know about Fury of Anubis.</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What is the RTP of Fury of Anubis?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Fury of Anubis has an RTP (Return to Player) of <strong>96.52%</strong>, which is above the industry average of 96%. This means for every $100 wagered over a long period, the game returns approximately $96.52 to players.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What is the maximum win on Fury of Anubis?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">The maximum win is <strong>10,000× your total bet</strong>. On a $1 bet that's $10,000; on the max $240 bet that's $2,400,000. The odds of hitting the max win are approximately 1 in 4,840,271 spins.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How do you trigger free spins in Fury of Anubis?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Land <strong>3, 4, 5, or 6 scatter symbols</strong> anywhere on the 5×6 grid to trigger 10 free spins. The more scatters you land, the higher your starting multiplier: 3 scatters = ×8, up to 6 scatters = ×64. Before the feature begins, you can gamble to double the starting multiplier up to ×256.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What is the tumbling reels mechanic?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">When a win lands, all winning symbols are removed from the grid and new symbols fall in from above — this is a tumble. Each consecutive tumble doubles the active win multiplier (×1 → ×2 → ×4 … up to ×1,024). A single spin can produce multiple tumbles, significantly boosting your total win.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is Fury of Anubis available to play for free?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Yes. You can play the <strong>Fury of Anubis free demo</strong> directly on this page — no download, no registration required. The demo uses virtual credits and is identical to the real-money version in terms of mechanics and features.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What is the Ante Bet feature?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">The Ante Bet costs <strong>3× your base bet</strong> (raising the total from e.g. $1 to $3) and increases the likelihood of triggering the free spins feature by <strong>10×</strong>. It doesn't guarantee a bonus but significantly boosts the natural hit frequency — useful for players who want more bonus action without using Bonus Buy.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          When was Fury of Anubis released?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Fury of Anubis was released on <strong>June 25, 2026</strong> by Pragmatic Play (game symbol: vs20wraanu).</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="font-size:1rem;">
+          <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:22px;height:22px;">
+            <polygon points="13,2 24,22 2,22" fill="none" stroke="#d4af37" stroke-width="1.8"/>
+            <circle cx="13" cy="14" r="3.5" fill="#d4af37" opacity=".85"/>
+          </svg>
+          FuryOfAnubis.casino
+        </div>
+        <p>The definitive resource for Fury of Anubis — free demo, RTP data, bonus breakdowns, and strategy. Part of the <a href="https://slotessentials.com/" target="_blank" rel="noopener">SlotEssentials</a> ecosystem.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Game Pages</h4>
+        <ul>
+          <li><a href="/demo/">Free Demo</a></li>
+          <li><a href="/slot-review/">Slot Review</a></li>
+          <li><a href="/paytable/">Paytable</a></li>
+          <li><a href="/statistics/">Statistics</a></li>
+          <li><a href="/tips-tricks/">Tips &amp; Tricks</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Content</h4>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/blog/fury-of-anubis-vs-gates-of-olympus/">vs Gates of Olympus</a></li>
+          <li><a href="/blog/fury-of-anubis-vs-sweet-bonanza/">vs Sweet Bonanza</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>SlotEssentials</h4>
+        <ul>
+          <li><a href="https://slotessentials.com/" target="_blank" rel="noopener">Main Site</a></li>
+          <li><a href="https://slotessentials.com/session-tracking" target="_blank" rel="noopener">Session Tracker</a></li>
+          <li><a href="https://slotessentials.com/bonus-hunt" target="_blank" rel="noopener">Bonus Hunt</a></li>
+          <li><a href="https://slotessentials.com/record-win-tracker" target="_blank" rel="noopener">Record Wins</a></li>
+          <li><a href="https://roobet.com/?ref=elite" target="_blank" rel="noopener">Play on Roobet</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 FuryOfAnubis.casino · Part of <a href="https://slotessentials.com/" target="_blank">SlotEssentials</a></p>
+      <p class="footer-disclaimer">18+ only. Gambling involves risk. Play responsibly. This site contains demo versions for entertainment. Always gamble within your means.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+</script>
+
+</body>
+</html>
