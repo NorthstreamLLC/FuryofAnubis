@@ -422,3 +422,12 @@ footer { border-top: 1px solid var(--border); background: var(--bg-card); paddin
   width: 100%;
   margin: 1.5rem 0;
 }
+
+/* ── NAV SLOTESSENTIALS BUTTON ── */
+.nav-se {
+  font-size: .82rem; font-weight: 700; color: #fff;
+  background: #f97316;
+  padding: .42rem .9rem; border-radius: 8px;
+  transition: background .2s, transform .15s; white-space: nowrap;
+}
+.nav-se:hover { background: #ea6c0a; color: #fff; transform: translateY(-1px); }
