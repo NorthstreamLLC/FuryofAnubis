@@ -1,0 +1,19 @@
+# OS junk
+desktop.ini
+.DS_Store
+Thumbs.db
+
+# Large media not served by the site
+videos/
+
+# Internal working docs — not for the public repo
+SEO-ACTION-PACK.md
+IMAGES-SETUP.txt
+
+# Tooling
+node_modules/
+.vercel/
+*.log
+
+# superseded by game-grid.jpg (smaller); local leftover
+images/game-grid.png

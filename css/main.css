@@ -412,7 +412,7 @@ footer { border-top: 1px solid var(--border); background: var(--bg-card); paddin
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 }
-@media (max-width: 900px) { .side-banner { display: none; } }
+@media (max-width: 1320px) { .side-banner { display: none; } }
 
 /* ── GAME SCREENSHOT ── */
 .game-screenshot {
