@@ -420,8 +420,14 @@ footer { border-top: 1px solid var(--border); background: var(--bg-card); paddin
   border: 1px solid var(--border-bright);
   box-shadow: 0 8px 40px rgba(212,175,55,0.15);
   width: 100%;
+  height: auto;          /* required: without this the HTML height attr wins and squashes the image */
+  display: block;
   margin: 1.5rem 0;
 }
+
+/* Global safety net — any img with width/height attributes needs this
+   or the attribute height overrides the CSS width and distorts it. */
+img { max-width: 100%; height: auto; }
 
 /* ── NAV SLOTESSENTIALS BUTTON ── */
 .nav-se {
@@ -431,3 +437,197 @@ footer { border-top: 1px solid var(--border); background: var(--bg-card); paddin
   transition: background .2s, transform .15s; white-space: nowrap;
 }
 .nav-se:hover { background: #ea6c0a; color: #fff; transform: translateY(-1px); }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   DESIGN SYSTEM v2 — 2026 refresh
+   Appended last so it overrides earlier rules at equal specificity.
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* action colour — matches the SlotEssentials network */
+  --action:       #f97316;
+  --action-hover: #ea6c0a;
+  --action-ink:   #3d1a05;
+
+  /* spacing scale */
+  --sp-1: .25rem;  --sp-2: .5rem;   --sp-3: .75rem;  --sp-4: 1rem;
+  --sp-5: 1.5rem;  --sp-6: 2rem;    --sp-7: 3rem;    --sp-8: 4.5rem;
+
+  /* surfaces */
+  --surface-1: #101018;
+  --surface-2: #16161f;
+  --hairline:  rgba(255,255,255,.07);
+}
+
+/* ── AMBIENT SECTION GLOW + MOTION ──────────────────────────────
+   One GPU-composited layer per section. transform/opacity only —
+   no layout thrash, no JS, no scroll listeners.                  */
+.section-pad { position: relative; overflow: hidden; isolation: isolate; }
+
+.section-pad::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 78vw; max-width: 900px;
+  aspect-ratio: 1 / 1;
+  left: -14%; top: -32%;
+  border-radius: 50%;
+  background: radial-gradient(circle at center,
+              rgba(212,175,55,.13) 0%,
+              rgba(212,175,55,.05) 42%,
+              transparent 70%);
+  pointer-events: none;
+  will-change: transform;
+  animation: drift-a 26s ease-in-out infinite alternate;
+}
+
+.section-pad::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 60vw; max-width: 680px;
+  aspect-ratio: 1 / 1;
+  right: -16%; bottom: -34%;
+  border-radius: 50%;
+  background: radial-gradient(circle at center,
+              rgba(249,115,22,.10) 0%,
+              rgba(160,124,32,.05) 45%,
+              transparent 70%);
+  pointer-events: none;
+  will-change: transform;
+  animation: drift-b 34s ease-in-out infinite alternate;
+}
+
+/* alternate the glow origin so consecutive sections don't repeat */
+.section-pad:nth-of-type(even)::before { left: auto; right: -14%; animation-duration: 31s; }
+.section-pad:nth-of-type(even)::after  { right: auto; left: -16%;  animation-duration: 27s; }
+.section-pad:nth-of-type(3n)::before   { animation-delay: -8s; }
+.section-pad:nth-of-type(3n)::after    { animation-delay: -12s; }
+
+@keyframes drift-a {
+  from { transform: translate3d(0,0,0)      scale(1);    opacity: .75; }
+  to   { transform: translate3d(6%,7%,0)    scale(1.16); opacity: 1;   }
+}
+@keyframes drift-b {
+  from { transform: translate3d(0,0,0)      scale(1.1);  opacity: .6;  }
+  to   { transform: translate3d(-7%,-5%,0)  scale(.94);  opacity: .95; }
+}
+
+/* slow breathing on the fixed page wash */
+.particles { will-change: transform; animation: wash 40s ease-in-out infinite alternate; }
+@keyframes wash {
+  from { transform: scale(1)    translate3d(0,0,0); }
+  to   { transform: scale(1.08) translate3d(0,-1.5%,0); }
+}
+
+/* ── SECTION HEADER — centred, accent underline ── */
+.section-head { text-align: center; max-width: 640px; margin: 0 auto var(--sp-6); }
+.section-head .section-title { display: inline-block; margin-bottom: 0; font-size: 1.75rem; letter-spacing: -.01em; }
+.section-head .section-title::after {
+  content: ""; display: block; height: 3px; width: 58%;
+  margin: .55rem auto 0; border-radius: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--action));
+  transform-origin: center;
+  animation: rule-in .8s cubic-bezier(.2,.7,.3,1) both;
+}
+@keyframes rule-in { from { transform: scaleX(0); opacity: 0; } to { transform: scaleX(1); opacity: 1; } }
+.section-head .section-lead { margin: .85rem auto 0; max-width: 100%; }
+
+/* ── CARDS ── */
+.card, .feature-card, .tool-card, .blog-card {
+  background: var(--surface-1);
+  border: 1px solid var(--hairline);
+  border-radius: 14px;
+  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+}
+.card:hover, .feature-card:hover, .tool-card:hover, .blog-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-bright);
+  box-shadow: 0 10px 34px rgba(0,0,0,.45), 0 0 0 1px rgba(212,175,55,.10);
+}
+.feature-card.is-featured { border: 2px solid var(--action); }
+
+/* ── ACTION BUTTON ── */
+.btn-action {
+  display: inline-flex; align-items: center; gap: .45rem;
+  background: var(--action); color: var(--action-ink);
+  font-weight: 700; font-size: .92rem;
+  padding: .75rem 1.5rem; border-radius: 999px;
+  transition: background .2s, transform .15s;
+  white-space: nowrap;
+}
+.btn-action:hover { background: var(--action-hover); color: var(--action-ink); transform: translateY(-2px); }
+
+/* ═══ MOBILE ═══════════════════════════════════════════════════
+   Was: .nav-links display:none at 768px with no hamburger, so
+   phone users had NO navigation, and .nav-right overflowed the
+   viewport by 250px. Nav now wraps to a second scrollable row.  */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    height: auto;
+    padding: .55rem .75rem .35rem;
+    row-gap: .4rem;
+  }
+  .nav-logo { font-size: .95rem; letter-spacing: .02em; flex: 1 1 auto; min-width: 0; }
+  .nav-logo svg { width: 20px; height: 20px; flex: none; }
+
+  .nav-right { flex: 0 0 auto; display: flex; gap: .35rem; }
+  .nav-right .nav-se,
+  .nav-right .nav-demo,
+  .nav-right .nav-cta { font-size: .72rem; padding: .34rem .6rem; border-radius: 7px; }
+  .nav-right .nav-demo { display: none; }
+
+  /* restore navigation as a scrollable strip */
+  .nav-links {
+    display: flex;
+    order: 3;
+    flex: 1 0 100%;
+    gap: .1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: .15rem;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a { flex: none; font-size: .78rem; padding: .3rem .55rem; }
+
+  /* layout */
+  .container { padding: 0 1.1rem; }
+  .section-pad { padding: 2.25rem 0; }
+  .section-head { margin-bottom: var(--sp-5); }
+  .section-head .section-title { font-size: 1.3rem; }
+  .feature-grid,
+  .cards-grid,
+  .tools-grid,
+  .blog-grid { grid-template-columns: 1fr !important; }
+  .stats-bar { grid-template-columns: 1fr 1fr; }
+
+  /* tables scroll rather than blow out the page */
+  .data-table { display: block; overflow-x: auto; white-space: nowrap; }
+
+  /* tap targets */
+  .faq-q { padding: .9rem 1rem; min-height: 44px; }
+  .btn, .btn-primary, .btn-outline, .btn-action { min-height: 44px; }
+
+  /* glow is cheaper and calmer on phones */
+  .section-pad::before { width: 110vw; left: -25%; }
+  .section-pad::after  { display: none; }
+}
+
+@media (max-width: 380px) {
+  .nav-right .nav-se { display: none; }
+  .nav-logo { font-size: .88rem; }
+}
+
+/* ── RESPECT REDUCED MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  .section-pad::before,
+  .section-pad::after,
+  .particles,
+  .section-head .section-title::after { animation: none !important; }
+  .card, .feature-card, .tool-card, .blog-card,
+  .btn-action, .nav-se, .nav-demo, .nav-cta { transition: none !important; }
+  html { scroll-behavior: auto; }
+}
