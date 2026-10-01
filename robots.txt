@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://furyofanubis.casino/sitemap.xml
+Sitemap: https://www.furyofanubis.casino/sitemap.xml
