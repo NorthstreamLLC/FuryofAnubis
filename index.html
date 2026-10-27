@@ -752,15 +752,15 @@
 
     /* mobile nav: was display:none on .nav-links leaving no navigation,
        and .nav-right overflowed the viewport. Now wraps to a scrollable row. */
-    @media (max-width: 768px) {
-      nav { flex-wrap:wrap; height:auto; padding:.55rem .75rem .35rem; row-gap:.4rem; }
-      .nav-logo { font-size:.95rem; letter-spacing:.02em; flex:1 1 auto; min-width:0; }
-      .nav-logo svg { width:20px; height:20px; flex:none; }
-      .nav-right { flex:0 0 auto; display:flex; gap:.35rem; }
+    /* nav needs ~1000px for logo + links + 3 CTAs; below that it wraps */
+    @media (max-width: 1000px) {
+      nav { flex-wrap:wrap; height:auto; padding:.55rem .9rem .35rem; row-gap:.4rem; }
+      .nav-logo { font-size:1rem; letter-spacing:.02em; flex:1 1 auto; min-width:0; }
+      .nav-logo svg { width:21px; height:21px; flex:none; }
+      .nav-right { flex:0 0 auto; display:flex; gap:.4rem; }
       .nav-right .nav-se, .nav-right .nav-demo, .nav-right .nav-cta {
-        font-size:.72rem; padding:.34rem .6rem; border-radius:7px;
+        font-size:.76rem; padding:.36rem .7rem; border-radius:7px;
       }
-      .nav-right .nav-demo { display:none; }
       .nav-links {
         display:flex; order:3; flex:1 0 100%; gap:.1rem;
         overflow-x:auto; scrollbar-width:none;
@@ -768,6 +768,8 @@
       }
       .nav-links::-webkit-scrollbar { display:none; }
       .nav-links a { flex:none; font-size:.78rem; padding:.3rem .55rem; }
+    }
+    @media (max-width: 768px) {
       .container { padding:0 1.1rem; }
       .feature-grid, .cards-grid, .tools-grid, .blog-grid { grid-template-columns:1fr !important; }
       .data-table { display:block; overflow-x:auto; white-space:nowrap; }
@@ -775,6 +777,9 @@
       .btn, .btn-primary, .btn-outline, .btn-action { min-height:44px; }
       section::before { width:110vw; left:-25%; }
       section::after  { display:none; }
+    }
+    @media (max-width: 480px) {
+      .nav-right .nav-demo { display:none; }
     }
     @media (max-width: 380px) {
       .nav-right .nav-se { display:none; }
@@ -822,7 +827,7 @@
     <a href="/paytable/">Paytable</a>
     <a href="/statistics/">Statistics</a>
     <a href="/tips-tricks/">Tips</a>
-    <a href="/blog/">Blog</a>
+    <a href="/calculator/">Calculator</a><a href="/blog/">Blog</a>
     <a href="/about/">About</a>
   </div>
   <div class="nav-right"><a href="https://slotessentials.com/" target="_blank" rel="noopener" class="nav-se">🎰 SlotEssentials</a><a href="/demo/" class="nav-demo">🎮 Play Demo</a><a href="https://roobet.com/?ref=elite" target="_blank" rel="nofollow sponsored noopener" class="nav-cta">💰 Play Real</a></div>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fury of Anubis Calculator &ndash; Max Win &amp; Multiplier Tool</title>
+  <meta name="description" content="Free Fury of Anubis calculator. See what the 10,000x ceiling pays at your stake, how the multiplier ladder builds to x1,024, and what feature buys really cost.">
+  <link rel="canonical" href="https://www.furyofanubis.casino/calculator/">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="icon" href="/favicon.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FuryOfAnubis.casino">
+  <meta property="og:title" content="Fury of Anubis Calculator &ndash; Max Win &amp; Multiplier Tool">
+  <meta property="og:description" content="Work out what 10,000x pays at your stake, follow the multiplier ladder to x1,024, and price feature buys before you make one.">
+  <meta property="og:url" content="https://www.furyofanubis.casino/calculator/">
+  <meta property="og:image" content="https://www.furyofanubis.casino/images/game-grid.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Fury of Anubis Calculator","url":"https://www.furyofanubis.casino/calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","description":"A free calculator for the Pragmatic Play slot Fury of Anubis: maximum win at any stake, the tumble multiplier ladder to x1,024, and feature-buy cost planning.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"FuryOfAnubis.casino","url":"https://www.furyofanubis.casino/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.furyofanubis.casino/"},{"@type":"ListItem","position":2,"name":"Calculator","item":"https://www.furyofanubis.casino/calculator/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does the Fury of Anubis max win calculator work?","acceptedAnswer":{"@type":"Answer","text":"Pragmatic Play publishes a maximum win of 10,000 times the total bet. The calculator multiplies the stake you enter by 10,000 to show the ceiling in cash. It is arithmetic from a published figure, not a prediction of any outcome."}},{"@type":"Question","name":"Why does the calculator not show bonus buy prices?","acceptedAnswer":{"@type":"Answer","text":"Pragmatic Play does not publish one universal feature-buy price across all currencies and markets, and operators configure them differently. You enter the price multiple shown in the game you are actually playing, and the tool converts it to cash at your stake."}},{"@type":"Question","name":"Does the multiplier ladder predict wins?","acceptedAnswer":{"@type":"Answer","text":"No. It shows what a given base win would pay at each rung of the tumble multiplier, which doubles on consecutive wins up to x1,024. It cannot tell you how often any rung is reached, because that probability is not published."}},{"@type":"Question","name":"Will a casino always pay the full 10,000x?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily. Operators apply their own maximum payout limits, and those caps can sit below the game's theoretical ceiling. Check the casino's terms as well as the game's information screen."}}]}]}</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YN0EQ3HEH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3YN0EQ3HEH');
+  </script>
+  <style>
+    .calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.1rem;margin-bottom:2rem}
+    .calc-card{background:var(--surface-1,#101018);border:1px solid var(--border);border-radius:14px;padding:1.4rem}
+    .calc-card h3{font-size:1rem;color:var(--gold-light);margin-bottom:.3rem}
+    .calc-hint{font-size:.76rem;color:var(--text-muted);margin-bottom:1rem;line-height:1.5}
+    .calc-field{margin-bottom:.9rem}
+    .calc-field label{display:block;font-size:.74rem;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);margin-bottom:.35rem}
+    .calc-field input{width:100%;background:#0a0a12;border:1px solid var(--border);border-radius:8px;
+      padding:.6rem .75rem;color:var(--text);font-size:1rem;font-family:inherit;min-height:44px}
+    .calc-field input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,175,55,.12)}
+    .calc-out{background:rgba(212,175,55,.07);border:1px solid var(--border-bright);border-radius:10px;
+      padding:.9rem 1rem;margin-top:.9rem}
+    .calc-out-label{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted)}
+    .calc-out-value{font-size:1.65rem;font-weight:800;color:var(--gold-light);line-height:1.2;word-break:break-word}
+    .calc-note{font-size:.74rem;color:var(--text-muted);margin-top:.5rem;line-height:1.5}
+    .calc-err{font-size:.78rem;color:var(--red);margin-top:.5rem;min-height:1em}
+    .ladder-row td:first-child{color:var(--gold);font-weight:700;white-space:nowrap}
+    .ladder-capped td{opacity:.55}
+    .ladder-capped td:last-child::after{content:" (capped)";font-size:.72rem;color:var(--text-muted)}
+  </style>
+</head>
+<body>
+<div class="particles"></div>
+<nav>
+  <a class="nav-logo" href="/">FuryOfAnubis.casino</a>
+  <div class="nav-links"><a href="/">Home</a><a href="/demo/">Demo</a><a href="/slot-review/">Review</a><a href="/paytable/">Paytable</a><a href="/statistics/">Statistics</a><a href="/calculator/">Calculator</a><a href="/blog/">Blog</a></div>
+  <div class="nav-right"><a href="https://slotessentials.com/" target="_blank" rel="noopener" class="nav-se">🎰 SlotEssentials</a><a href="/demo/" class="nav-demo">🎮 Play Demo</a><a href="https://roobet.com/?ref=elite" target="_blank" rel="nofollow sponsored noopener" class="nav-cta">💰 Play Real</a></div>
+</nav>
+
+<section class="page-hero">
+  <div class="breadcrumb"><a href="/">Home</a> › <span>Calculator</span></div>
+  <h1 class="page-title">Fury of Anubis Calculator</h1>
+  <p class="page-lead">Work out what the published 10,000&times; ceiling pays at your stake, follow the tumble multiplier to its &times;1,024 cap, and price a feature buy before you make one. Free, no signup, nothing stored.</p>
+</section>
+
+<section class="section-pad">
+  <div class="container" style="max-width:1000px">
+
+    <div class="calc-grid">
+
+      <div class="calc-card">
+        <h3>Maximum win at your stake</h3>
+        <p class="calc-hint">Pragmatic Play publishes a ceiling of 10,000&times; the total bet. This converts that multiple into cash.</p>
+        <div class="calc-field">
+          <label for="mw-stake">Your total bet</label>
+          <input type="number" id="mw-stake" value="1.00" min="0.01" step="0.01" inputmode="decimal">
+        </div>
+        <div class="calc-out">
+          <div class="calc-out-label">10,000&times; ceiling</div>
+          <div class="calc-out-value" id="mw-out">$10,000.00</div>
+        </div>
+        <div class="calc-err" id="mw-err"></div>
+        <p class="calc-note">Operators apply their own maximum payout limits, which can sit <em>below</em> the game ceiling. Check the casino's terms, not just the game's.</p>
+      </div>
+
+      <div class="calc-card">
+        <h3>Feature buy planner</h3>
+        <p class="calc-hint">Prices are not published universally &mdash; enter the multiple shown in the game you are actually playing.</p>
+        <div class="calc-field">
+          <label for="fb-stake">Your total bet</label>
+          <input type="number" id="fb-stake" value="1.00" min="0.01" step="0.01" inputmode="decimal">
+        </div>
+        <div class="calc-field">
+          <label for="fb-price">Buy price shown in game (&times; bet)</label>
+          <input type="number" id="fb-price" value="100" min="1" step="1" inputmode="numeric">
+        </div>
+        <div class="calc-field">
+          <label for="fb-bank">Bankroll for this session</label>
+          <input type="number" id="fb-bank" value="500" min="0" step="1" inputmode="decimal">
+        </div>
+        <div class="calc-out">
+          <div class="calc-out-label">Cost per purchase</div>
+          <div class="calc-out-value" id="fb-cost">$100.00</div>
+          <div class="calc-out-label" style="margin-top:.7rem">Purchases your bankroll covers</div>
+          <div class="calc-out-value" id="fb-count">5</div>
+        </div>
+        <div class="calc-err" id="fb-err"></div>
+        <p class="calc-note">A run of unremarkable features is entirely ordinary. If the number above looks small, that is the useful information.</p>
+      </div>
+
+    </div>
+
+    <h2 class="section-title">Tumble multiplier ladder</h2>
+    <p class="section-lead">The multiplier starts at &times;1 and doubles on each consecutive winning tumble, up to a published cap of &times;1,024. Enter a base win and stake to see what each rung would pay.</p>
+
+    <div class="calc-card" style="margin-bottom:2rem">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem">
+        <div class="calc-field" style="margin-bottom:0">
+          <label for="ld-stake">Your total bet</label>
+          <input type="number" id="ld-stake" value="1.00" min="0.01" step="0.01" inputmode="decimal">
+        </div>
+        <div class="calc-field" style="margin-bottom:0">
+          <label for="ld-base">Base win (&times; bet, before multiplier)</label>
+          <input type="number" id="ld-base" value="5" min="0.1" step="0.1" inputmode="decimal">
+        </div>
+      </div>
+      <div class="calc-err" id="ld-err"></div>
+      <div style="overflow-x:auto;margin-top:1.2rem">
+        <table class="data-table" id="ld-table">
+          <thead><tr><th>Multiplier</th><th>Tumble</th><th>Pays</th></tr></thead>
+          <tbody id="ld-body"></tbody>
+        </table>
+      </div>
+      <p class="calc-note">Rows greyed out would exceed the published 10,000&times; game ceiling and are shown capped at it. The ladder shows what a win <em>would</em> pay at each rung &mdash; it says nothing about how often any rung is reached.</p>
+    </div>
+
+    <div class="callout">
+      <div class="callout-icon">⚠</div>
+      <div class="callout-text"><strong>What this tool cannot tell you.</strong> Pragmatic Play's public Fury of Anubis pages do not publish a hit frequency, a bonus frequency or a maximum-win probability. No calculator can supply those, and any site offering you odds for this game is presenting an estimate as data. These are conversions of published figures, nothing more.</div>
+    </div>
+
+    <h2 class="section-title" style="margin-top:2.5rem">How to read the multiplier ladder</h2>
+    <p class="section-lead">The ladder is the part players most often misread, so it is worth being precise about what it shows.</p>
+    <div class="card" style="margin-bottom:1.5rem">
+      <p class="card-text">Fury of Anubis is a scatter-pay slot with tumbling reels. When a win forms, the winning symbols are removed and new ones drop in. If that produces another win, the multiplier doubles &mdash; &times;1, &times;2, &times;4, &times;8, and onward to the published &times;1,024 cap. Each rung in the table above is one more consecutive winning tumble.</p>
+      <p class="card-text">The crucial point is that the multiplier only advances on <em>consecutive</em> wins. A spin that produces one win and then nothing never leaves the opening rung. This is why two features that begin identically can finish thousands of times apart: the starting multiplier sets the floor, and the length of the tumble chain determines everything above it.</p>
+      <p class="card-text">It also explains why the greyed-out rows appear. A healthy base win combined with a long chain would mathematically exceed the game's published 10,000&times; ceiling, so the table caps those rows. In the game itself the win is simply paid at the ceiling. Reaching the &times;1,024 multiplier cap and reaching the 10,000&times; win cap are two different events, and neither implies the other &mdash; the <a href="/blog/fury-of-anubis-max-win/">max win guide</a> covers that distinction in full.</p>
+    </div>
+
+    <h2 class="section-title">Using the feature buy planner honestly</h2>
+    <div class="card" style="margin-bottom:1.5rem">
+      <p class="card-text">The planner answers one question: how many feature purchases does my bankroll actually cover? That number tends to be smaller than people expect, and seeing it before a session is more useful than discovering it during one.</p>
+      <p class="card-text">A worked example. At a $1 bet with a buy priced at 100&times;, each purchase costs $100, so a $500 bankroll covers five. Five is a very small sample of a high-variance feature &mdash; a run of five unremarkable rounds is entirely ordinary and carries no information about the sixth. At a $0.20 bet the same purchase costs $20 and the same bankroll covers twenty-five, which is still a small sample but a meaningfully longer session.</p>
+      <p class="card-text">What the planner deliberately does not do is tell you which tier is &ldquo;worth it&rdquo;. Feature prices are set so that the expected return is broadly consistent across tiers; what changes between them is variance, not value. A higher tier concentrates the same expected return into fewer, larger outcomes. If you find yourself buying again specifically to recover the previous purchase, the planner has already told you what you need to know &mdash; stop.</p>
+    </div>
+
+    <h2 class="section-title" style="margin-top:2.5rem">Where the numbers come from</h2>
+    <p class="section-lead">The 10,000&times; maximum and the &times;1,024 multiplier cap are published on <a href="https://www.pragmaticplay.com/en/campaign/fury-of-anubis/" target="_blank" rel="noopener">Pragmatic Play's official campaign page</a>. Feature-buy prices are not published universally, which is why this tool asks you for the figure your game displays rather than assuming one. Full detail is on the <a href="/paytable/">paytable</a> and <a href="/statistics/">statistics</a> pages.</p>
+
+    <p class="section-lead">Test any of this at no cost in the <a href="/demo/">free demo</a> first. If you track results across several games, the <a href="https://slotessentials.com/bonus-hunt" target="_blank" rel="noopener">SlotEssentials Bonus Hunt Tracker</a> logs each buy and its return so the running total is visible while you play.</p>
+
+    <h2 class="section-title" style="margin-top:2.5rem">Calculator FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How does the Fury of Anubis max win calculator work? <span class="faq-icon">+</span></button><div class="faq-a">Pragmatic Play publishes a maximum win of 10,000 times the total bet. The calculator multiplies the stake you enter by 10,000 to show the ceiling in cash. It is arithmetic from a published figure, not a prediction of any outcome.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Why does the calculator not show bonus buy prices? <span class="faq-icon">+</span></button><div class="faq-a">Pragmatic Play does not publish one universal feature-buy price across all currencies and markets, and operators configure them differently. You enter the price multiple shown in the game you are actually playing, and the tool converts it to cash at your stake.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Does the multiplier ladder predict wins? <span class="faq-icon">+</span></button><div class="faq-a">No. It shows what a given base win would pay at each rung of the tumble multiplier, which doubles on consecutive wins up to x1,024. It cannot tell you how often any rung is reached, because that probability is not published.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Will a casino always pay the full 10,000x? <span class="faq-icon">+</span></button><div class="faq-a">Not necessarily. Operators apply their own maximum payout limits, and those caps can sit below the game's theoretical ceiling. Check the casino's terms as well as the game's information screen.</div></div>
+    </div>
+
+    <p style="font-size:.78rem;color:var(--text-muted);margin-top:2rem;">Last updated: <time datetime="2026-10-22">22 October 2026</time> · Figures checked against Pragmatic Play's official campaign page. Nothing you enter is stored or sent anywhere — the calculator runs entirely in your browser.</p>
+
+    <p style="font-size:.8rem;color:var(--text-muted);margin-top:1rem;">18+ only. This tool converts published figures into cash amounts; it does not predict results and the maximum win is an outlier, not an expectation. Only gamble with money you can afford to lose. Free confidential support is available from <a href="https://www.begambleaware.org/" target="_blank" rel="noopener nofollow">BeGambleAware</a>.</p>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="font-size:.95rem;">FuryOfAnubis.casino</div>
+        <p>Free Fury of Anubis demo, verified data and tools. Part of <a href="https://slotessentials.com/" target="_blank" rel="noopener">SlotEssentials</a>.</p>
+      </div>
+      <div class="footer-col"><h4>Game Pages</h4><ul><li><a href="/demo/">Free Demo</a></li><li><a href="/slot-review/">Review</a></li><li><a href="/paytable/">Paytable</a></li><li><a href="/statistics/">Statistics</a></li><li><a href="/calculator/">Calculator</a></li></ul></div>
+      <div class="footer-col"><h4>Content</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/about/">About</a></li></ul></div>
+      <div class="footer-col"><h4>SlotEssentials</h4><ul><li><a href="https://slotessentials.com/" target="_blank" rel="noopener">Main Site</a></li><li><a href="https://slotessentials.com/bonus-hunt" target="_blank" rel="noopener">Bonus Hunt Tracker</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 FuryOfAnubis.casino · Part of <a href="https://slotessentials.com/" target="_blank" rel="noopener">SlotEssentials</a></p>
+      <p class="footer-disclaimer">18+ only. Gamble responsibly.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(b){b.parentElement.classList.toggle("open");}
+(function(){
+  var MAX_WIN_X = 10000, MULT_CAP = 1024;
+  var money = function(n){
+    return "$" + n.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
+  };
+  var num = function(el){ var v = parseFloat(el.value); return isFinite(v) ? v : NaN; };
+  var show = function(id,msg){ document.getElementById(id).textContent = msg || ""; };
+
+  // ---- max win ----
+  var mwStake = document.getElementById("mw-stake");
+  function calcMaxWin(){
+    var s = num(mwStake);
+    if(isNaN(s) || s <= 0){ show("mw-err","Enter a bet above 0."); document.getElementById("mw-out").textContent="—"; return; }
+    show("mw-err","");
+    document.getElementById("mw-out").textContent = money(s * MAX_WIN_X);
+  }
+
+  // ---- feature buy ----
+  var fbStake=document.getElementById("fb-stake"), fbPrice=document.getElementById("fb-price"), fbBank=document.getElementById("fb-bank");
+  function calcBuy(){
+    var s=num(fbStake), p=num(fbPrice), b=num(fbBank);
+    if(isNaN(s)||s<=0||isNaN(p)||p<=0){ show("fb-err","Enter a bet and a buy price above 0.");
+      document.getElementById("fb-cost").textContent="—"; document.getElementById("fb-count").textContent="—"; return; }
+    if(isNaN(b)||b<0){ show("fb-err","Enter a bankroll of 0 or more."); return; }
+    show("fb-err","");
+    var cost = s*p;
+    document.getElementById("fb-cost").textContent = money(cost);
+    document.getElementById("fb-count").textContent = Math.floor(b/cost).toLocaleString("en-US");
+  }
+
+  // ---- ladder ----
+  var ldStake=document.getElementById("ld-stake"), ldBase=document.getElementById("ld-base"), ldBody=document.getElementById("ld-body");
+  function calcLadder(){
+    var s=num(ldStake), base=num(ldBase);
+    if(isNaN(s)||s<=0||isNaN(base)||base<=0){ show("ld-err","Enter a bet and a base win above 0."); ldBody.innerHTML=""; return; }
+    show("ld-err","");
+    var ceiling = s*MAX_WIN_X, rows="", i=0;
+    for(var m=1; m<=MULT_CAP; m*=2){
+      var raw = s*base*m, pay = Math.min(raw, ceiling), capped = raw > ceiling;
+      rows += '<tr class="ladder-row'+(capped?' ladder-capped':'')+'">'
+            + '<td>×'+m.toLocaleString("en-US")+'</td>'
+            + '<td>'+(i===0?"opening win":"tumble "+i)+'</td>'
+            + '<td>'+money(pay)+'</td></tr>';
+      i++;
+    }
+    ldBody.innerHTML = rows;
+  }
+
+  [mwStake].forEach(function(el){ el.addEventListener("input",calcMaxWin); });
+  [fbStake,fbPrice,fbBank].forEach(function(el){ el.addEventListener("input",calcBuy); });
+  [ldStake,ldBase].forEach(function(el){ el.addEventListener("input",calcLadder); });
+  calcMaxWin(); calcBuy(); calcLadder();
+})();
+</script>
+</body>
+</html>
